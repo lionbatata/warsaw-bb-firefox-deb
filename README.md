@@ -1,4 +1,4 @@
-Gostaria de agradecer ao lichti/warsaw-browser pois esse repositório é como um "fork" deste, visto que:
+Gostaria de agradecer ao [lichti/warsaw-browser](https://hub.docker.com/r/lichti/warsaw-browser/) pois esse repositório é como um "fork" deste, visto que:
 
 1) Customizei o container para acesso exclusivo ao BB (Banco do Brasil);
 2) Resolvi o problema no docker-run com a inclusão do parâmetro --shm-size 2g;
@@ -6,7 +6,7 @@ Gostaria de agradecer ao lichti/warsaw-browser pois esse repositório é como um
 
 No entanto, é muito fácil mudar o container para acessar outros bancos que usam igualmente a ferramenta warsaw, basta umas simples mudanças no Dockerfile e start.sh.
 
-Como executar:
+# Como executar:
 
 1) Criar o alias e a function, como segue, incluindo o código abaixo no seu .bashrc ou no /etc/bash.bashrc
 
