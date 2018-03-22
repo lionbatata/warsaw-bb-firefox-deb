@@ -10,7 +10,7 @@ No entanto, é muito fácil mudar o container para acessar outros bancos que usa
 
 1) Criar o alias e a function, como segue, incluindo o código abaixo no seu .bashrc ou no /etc/bash.bashrc
 
-alias bb = "warsaw-bb-firefox-deb"
+alias bb="warsaw-bb-firefox-deb"
 
 function warsaw-bb-firefox-deb {
      xhost +;
