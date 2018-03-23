@@ -10,18 +10,18 @@ No entanto, é muito fácil mudar o container para acessar outros bancos que usa
 
 1) Criar o alias e a function, como segue, incluindo o código abaixo no seu .bashrc ou no /etc/bash.bashrc
 
-alias bb="warsaw-bb-firefox-deb"
-
-function warsaw-bb-firefox-deb {
-     xhost +;
-     docker run -it --rm \
-          -v /tmp/.X11-unix:/tmp/.X11-unix \
-          -v $HOME/Downloads:/home/bank/Downloads \
-          -e DISPLAY=unix$DISPLAY \
-          --shm-size 2g \
-          --name warsaw-bb-firefox-deb \
-          lionbatata/warsaw-bb-firefox-deb;
-}
+     alias bb="warsaw-bb-firefox-deb"
+     
+     function warsaw-bb-firefox-deb {
+          xhost +;
+          docker run -it --rm \
+               -v /tmp/.X11-unix:/tmp/.X11-unix \
+               -v $HOME/Downloads:/home/bank/Downloads \
+               -e DISPLAY=unix$DISPLAY \
+               --shm-size 2g \
+               --name warsaw-bb-firefox-deb \
+               lionbatata/warsaw-bb-firefox-deb;
+     }
 
 2) abrir um console na sua gui de uso e executar:
 
