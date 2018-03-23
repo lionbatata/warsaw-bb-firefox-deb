@@ -27,7 +27,7 @@ function warsaw-bb-firefox-deb {
      
 2. Abrir um console na sua gui de uso e executar:
 
-$ bb
+`$ bb`
 
 # Obs:
 
