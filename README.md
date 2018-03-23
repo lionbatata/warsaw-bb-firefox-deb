@@ -27,3 +27,9 @@ function warsaw-bb-firefox-deb {
 
 $ bb
 
+# Obs:
+
+Não executar o alias bb (docker run) como root, adicionar seu usuário ao grupo docker, logoff geral e logar-se novamente. Para isso executar, por exemplo:
+  
+     # usermod -a -G docker <sua-conta>
+    
