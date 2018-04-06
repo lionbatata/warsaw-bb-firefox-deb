@@ -22,6 +22,7 @@ function warsaw-bb-firefox-deb {
       --shm-size 2g \
       --name warsaw-bb-firefox-deb \
       lionbatata/warsaw-bb-firefox-deb;
+      xhost -;
  }
  ```
      
