@@ -34,6 +34,10 @@ RUN apt-get update \
   xauth \
   #language-pack-pt \
   locales \
+  python2.7 \
+  python-openssl \
+  zenity \
+  libgtk2.0-0 \
   firefox-esr \
   firefox-esr-l10n-pt-br \
   --no-install-recommends \
