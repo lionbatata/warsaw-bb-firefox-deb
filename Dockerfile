@@ -1,24 +1,18 @@
 FROM debian:stable-slim
 LABEL maintainer "Lion Batata <lionbatata@gmail.com>"
 
-# docker run -it --rm \
-#            -v /tmp/.X11-unix:/tmp/.X11-unix \
-#            -v $HOME/Downloads:/home/bank/Downloads \
-#            -e DISPLAY=unix$DISPLAY \
-#	     --shm-size 2g \
-#            --name warsaw-bb-firefox-deb \
-#            lionbatata/warsaw-bb-firefox-deb
-
 COPY start.sh /start.sh
 COPY locale.gen /etc/locale.gen
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update \
+RUN echo "deb http://security.debian.org/debian-security jessie/updates main\n" >> /etc/apt/sources.list \
+  && apt-get update \
   && apt-get install -y \
   x11-utils \
   x11-apps \
   openssl \
   libcurl3 \
+  libssl1.0.0 \
   libnss3-tools \
   apt-transport-https \
   ca-certificates \
@@ -32,9 +26,9 @@ RUN apt-get update \
   libv4l-0 \
   fonts-symbola \
   xauth \
-  #language-pack-pt \
   locales \
   python2.7 \
+  python3 \
   python-openssl \
   zenity \
   libgtk2.0-0 \
